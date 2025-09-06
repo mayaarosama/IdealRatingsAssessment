@@ -167,7 +167,7 @@ def analyze_hybrid_questions(df: pd.DataFrame) -> Dict[str, Dict[str, Any]]:
     total_counts = df.groupby('Category').size()
     out_of_stock_percentages = (out_of_stock_counts / total_counts * 100).fillna(0)
     
-    if len(out_of_stock_percentages) > 0:
+    if out_of_stock_percentages.max() > 0:
         highest_percentage_category = out_of_stock_percentages.idxmax()
         highest_percentage_value = out_of_stock_percentages.max()
         results['highest_out_of_stock_percentage'] = {
