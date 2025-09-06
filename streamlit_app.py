@@ -254,11 +254,11 @@ def show_numerical_questions(df):
                 for key, value in result['values'].items():
                     st.write(f"  - {key}: {value}")
             else:
-                st.write(f"**Value:** {result.get('value', result.get('min_price', 'N/A'))}")
+                st.write(f"**Value:** {result.get('value', result.get('min_price', 'max_price'))}")
 
 def show_hybrid_questions(df):
     """Display hybrid questions page."""
-    st.header("🔄 Hybrid Questions")
+    st.header("Hybrid Questions")
     
     hybrid_results = analyze_hybrid_questions(df)
     
@@ -332,7 +332,7 @@ def main():
     
     page = st.sidebar.selectbox(
         "Choose Analysis Type",
-        ["Dataset Overview", "Categorical Questions", "Numerical Questions", "Hybrid Questions", "Custom Query"]
+        ["Dataset Overview", "Categorical Questions", "Numerical Questions", "Hybrid Questions"]
     )
     
     # Page content based on selection
