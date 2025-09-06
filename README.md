@@ -39,7 +39,7 @@ README.md                # This file
 ### Step 1: Clone or Download the Project
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/mayaarosama/IdealRatingsAssessment.git
 ```
 
 ### Step 2: Install Dependencies
@@ -129,3 +129,4 @@ The system can answer various types of questions:
 - **Requests**: HTTP library
 
 **Note**: This application is designed for assessment purposes.
+
